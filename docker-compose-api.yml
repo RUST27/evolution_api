@@ -1,6 +1,6 @@
 services:
   evolution_api:
-    image: atendai/evolution-api:latest
+    image: atendai/evolution-api:v2.1.1 # Versión estable probada
     container_name: evolution_api
     restart: always
     environment:
@@ -13,7 +13,6 @@ services:
     networks:
       - n8n-stack_default
 
-# ESTA SECCIÓN ES LA QUE FALTA
 networks:
   n8n-stack_default:
     external: true
