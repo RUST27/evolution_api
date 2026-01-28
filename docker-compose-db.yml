@@ -1,0 +1,17 @@
+services:
+  postgres_db:
+    image: postgres:15-alpine
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: cristian_admin
+      POSTGRES_PASSWORD: halote621
+      POSTGRES_DB: evolution_db
+    volumes:
+      - ../postgres_data:/var/lib/postgresql/data
+    networks:
+      - n8n-stack_default
+
+networks:
+  n8n-stack_default:
+    external: true
