@@ -21,8 +21,9 @@ services:
     environment:
       - SERVER_URL=https://api.cristianteran.xyz
       - AUTHENTICATION_API_KEY=snk_near_621621#?monday
-      # Configuración de Base de Datos
+      # CONFIGURACIÓN DE BASE DE DATOS (ESTAS LÍNEAS SON LAS QUE FALTABAN)
       - DATABASE_ENABLED=true
+      - DATABASE_CONNECTION_TYPE=postgres
       - DATABASE_CONNECTION_URI=postgresql://cristian_admin:halote621@postgres_db:5432/evolution_db?sslmode=disable
       - DATABASE_SAVE_DATA_INSTANCE=true
     networks:
