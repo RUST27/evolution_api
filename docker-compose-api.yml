@@ -10,6 +10,10 @@ services:
       - DATABASE_CONNECTION_TYPE=postgres
       - DATABASE_CONNECTION_URI=postgresql://cristian_admin:halote621@postgres_db:5432/evolution_db?sslmode=disable
       - DATABASE_SAVE_DATA_INSTANCE=true
-      - DATABASE_SAVE_DATA_NEW_MESSAGE=true
     networks:
       - n8n-stack_default
+
+# ESTA SECCIÓN ES LA QUE FALTA
+networks:
+  n8n-stack_default:
+    external: true
